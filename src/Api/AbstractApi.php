@@ -14,6 +14,8 @@ use PrivatePackagist\ApiClient\HttpClient\Message\ResponseMediator;
 
 abstract class AbstractApi
 {
+    const DEFAULT_LIMIT = 500;
+
     /** @var Client */
     protected $client;
     /** @var ResponseMediator */
