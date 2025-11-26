@@ -13,7 +13,6 @@ use Http\Client\Common\Plugin;
 use Http\Discovery\Psr17FactoryDiscovery;
 use PrivatePackagist\ApiClient\HttpClient\HttpPluginClientBuilder;
 use PrivatePackagist\ApiClient\HttpClient\Message\ResponseMediator;
-use PrivatePackagist\ApiClient\HttpClient\Plugin\AutoPaginator;
 use PrivatePackagist\ApiClient\HttpClient\Plugin\ExceptionThrower;
 use PrivatePackagist\ApiClient\HttpClient\Plugin\PathPrepend;
 use PrivatePackagist\ApiClient\HttpClient\Plugin\RequestSignature;
@@ -50,7 +49,6 @@ class Client
         }
         $builder->addPlugin(new Plugin\HeaderDefaultsPlugin($headers));
         $builder->addPlugin(new ExceptionThrower($this->responseMediator));
-        $builder->addPlugin(new AutoPaginator($httpClientBuilder->getRequestFactory(), $httpClientBuilder->getStreamFactory(), $this->responseMediator));
     }
 
     /**
