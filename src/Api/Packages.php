@@ -54,7 +54,7 @@ class Packages extends AbstractApi
 
         $filters = array_merge(['limit' => self::DEFAULT_LIMIT], $filters);
 
-        return $this->get('/packages/', $filters);
+        return $this->getCollection('/packages/', $filters);
     }
 
     public function show($packageIdOrName)

@@ -26,7 +26,7 @@ class PackagesTest extends ApiTestCase
         /** @var Packages&MockObject $api */
         $api = $this->getApiMock();
         $api->expects($this->once())
-            ->method('get')
+            ->method('getCollection')
             ->with($this->equalTo('/packages/'))
             ->willReturn($expected);
 
@@ -54,7 +54,7 @@ class PackagesTest extends ApiTestCase
         /** @var Packages&MockObject $api */
         $api = $this->getApiMock();
         $api->expects($this->once())
-            ->method('get')
+            ->method('getCollection')
             ->with($this->equalTo('/packages/'), $this->equalTo($expectedQueryParams))
             ->willReturn($expected);
 
