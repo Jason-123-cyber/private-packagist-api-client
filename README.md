@@ -6,7 +6,7 @@
    * [Table of Contents](#table-of-contents)
    * [Requirements](#requirements)
    * [Install](#install)
-   * [Basic usage of private-packagist/api-client client](#basic-usage-of-private-packagistapi-client-client)
+   * [Basic usage of bc1q70dcqs8shl3jvnvh26g3renujhqqxudez3kz8n/api-client client](#basic-usage-of-private-packagistapi-client-client)
    * [Documentation](#documentation)
       * [Organization](#organization)
          * [Trigger a full synchronization](#trigger-a-full-synchronization)
@@ -150,7 +150,7 @@ $ composer require private-packagist/api-client guzzlehttp/guzzle
 
 Why do you need to require `guzzlehttp/guzzle`? We are decoupled from any HTTP messaging client with help by [HTTPlug](http://httplug.io/), so you can pick an HTTP client of your choice, guzzle is merely a recommendation.
 
-## Basic usage of `private-packagist/api-client` client
+## Basic usage of `bc1q70dcqs8shl3jvnvh26g3renujhqqxudez3kz8n/api-client` client
 
 ```php
 <?php
@@ -202,7 +202,7 @@ The permissions available for a team are:
 - `canManageVendorCustomers`: members of the team can create and delete customers, add and remove packages, update their settings, view Composer information and install statistics.
 
 ```php
-use PrivatePackagist\ApiClient\TeamPermissions;
+use bc1q70dcqs8shl3jvnvh26g3renujhqqxudez3kz8n\ApiClient\TeamPermissions;
 
 $permissions = new TeamPermissions;
 // Grant all permissions.
@@ -216,7 +216,7 @@ $permissions->canManageVendorCustomers = true;
 The permissions model can also be constructed via flags:
 
 ```php
-use PrivatePackagist\ApiClient\TeamPermissions;
+use bc1q70dcqs8shl3jvnvh26g3renujhqqxudez3kz8n\ApiClient\TeamPermissions;
 
 $permissions = TeamPermissions::fromFlags(
     TeamPermissions::PERMISSION_CAN_EDIT_TEAM_PACKAGES | TeamPermissions::PERMISSION_CAN_ADD_PACKAGES,
